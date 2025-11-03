@@ -1,13 +1,26 @@
-import React from "react";
+import React, { useRef } from "react";
 import ReactPlayer from "react-player";
 import { AiOutlineClose } from "react-icons/ai";
 import "../styles/videos.css";
 
 const TrailerPlayer = ({ trailerUrl, onClose }) => {
+  const playerRef = useRef(null);
+
   if (!trailerUrl) return null;
+  console.log("Trailer URL trying to play:", trailerUrl);
+
+
+  const handleClose = () => {
+    try {
+      playerRef.current?.seekTo(0);
+    } catch (error) {
+      console.warn("Error while closing trailer:", error);
+    }
+    onClose();
+  };
 
   return (
-    <div className="trailer-wrapper show" onClick={onClose}>
+    <div className="trailer-wrapper show" onClick={handleClose}>
       <div
         className="trailer-box"
         onClick={(e) => e.stopPropagation()}
@@ -20,7 +33,7 @@ const TrailerPlayer = ({ trailerUrl, onClose }) => {
         }}
       >
         <button
-          onClick={onClose}
+          onClick={handleClose}
           style={{
             position: "absolute",
             top: 10,
@@ -39,14 +52,17 @@ const TrailerPlayer = ({ trailerUrl, onClose }) => {
         >
           <AiOutlineClose size={20} />
         </button>
-
-        <ReactPlayer
-          url={trailerUrl}
-          controls
-          playing
+        <iframe
           width="100%"
-          height="480px"
+          height="480"
+          src={trailerUrl}
+          title="YouTube trailer"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
         />
+
+
       </div>
     </div>
   );

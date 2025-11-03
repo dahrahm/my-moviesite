@@ -41,11 +41,17 @@ function TvShows() {
         `https://api.themoviedb.org/3/tv/${show.id}/videos`,
         { params: { api_key: apiKey } }
       );
+      console.log("Trailer results for:", show.name, res.data.results);
+
       const video =
         res.data.results.find((v) => v.type === "Trailer" && v.site === "YouTube") ||
         res.data.results.find((v) => v.site === "YouTube");
       if (video) {
-        setTrailerUrl(`https://www.youtube.com/watch?v=${video.key}`);
+
+        setTrailerUrl(`https://www.youtube.com/embed/${video.key}`);
+        console.log("Trailer URL:", `https://www.youtube.com/embed/${video.key}`);
+
+
         setShowTrailer(true);
       } else {
         alert("No trailer available for this TV show.");

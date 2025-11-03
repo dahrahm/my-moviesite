@@ -1,0 +1,241 @@
+.pricing-page {
+  padding: 80px 20px 120px;
+  transition: background-color 0.25s ease, color 0.25s ease;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+  position: relative;
+  height: 100vh;
+  z-index: 999;
+}
+
+
+.pricing-page.dark {
+  background: linear-gradient(180deg,#050608,#07111a);
+  color: #fff;
+}
+
+.pricing-page.light {
+  background: #f6f7fb;
+  color: #111;
+}
+
+.pricing-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pricing-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.pricing-header h2 {
+  font-size: 1.8rem;
+  margin-bottom: 6px;
+}
+
+.pricing-header .sub {
+  opacity: 0.8;
+  font-size: 0.95rem;
+}
+
+.billing-toggle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.billing-toggle .label {
+  font-weight: 600;
+  color: rgba(255,255,255,0.6);
+}
+
+.pricing-page.light .billing-toggle .label {
+  color: rgba(0,0,0,0.6);
+}
+
+.billing-toggle .label.active {
+  color: #e50914; /* accent */
+}
+
+/* switch */
+.switch {
+  width: 56px;
+  height: 28px;
+  background: #222;
+  border-radius: 999px;
+  padding: 3px;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+
+.pricing-page.light .switch {
+  background: #ddd;
+}
+
+.switch .switch-knob {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #fff;
+  transform: translateX(0);
+  transition: transform 0.25s ease;
+}
+
+.switch.yearly {
+  background: linear-gradient(90deg,#6b21a8,#8b5cf6);
+}
+.switch.yearly .switch-knob {
+  transform: translateX(28px);
+}
+
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.plan-card {
+  border-radius: 12px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 360px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: default;
+}
+
+/* card theme */
+.pricing-page.dark .plan-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+}
+
+.pricing-page.light .plan-card {
+  background: linear-gradient(180deg,#fff,#fbfbff);
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 8px 20px rgba(18,25,40,0.04);
+}
+
+.plan-card:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.25);
+}
+
+.plan-top h3 {
+  font-size: 1.25rem;
+  margin-bottom: 6px;
+}
+
+.price {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin: 6px 0 2px;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.price .ngn {
+  font-weight: 500;
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+.period {
+  font-size: 0.85rem;
+  opacity: 0.7;
+  margin-bottom: 14px;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.features li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.98rem;
+  color: inherit;
+}
+
+.features .check {
+  color: #34d399; 
+  min-width: 20px;
+  min-height: 20px;
+}
+
+/* button */
+.plan-action {
+  margin-top: auto;
+}
+
+.subscribe-btn {
+  width: 100%;
+  background: linear-gradient(90deg,#e50914,#8b5cf6); /* red -> purple */
+  color: #fff;
+  border: none;
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.subscribe-btn .btn-subtext {
+  display: block;
+  font-weight: 500;
+  font-size: 0.8rem;
+  opacity: 0.9;
+  margin-top: 4px;
+}
+
+.subscribe-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(139,92,246,0.18);
+}
+
+.disclaimer {
+  margin-top: 18px;
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+/* RESPONSIVE */
+@media (max-width: 980px) {
+  .plans-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .plans-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-header {
+    align-items: flex-start;
+  }
+
+  .billing-toggle {
+    margin-top: 12px;
+    width: 100%;
+    justify-content: flex-start;
+  }
+}

@@ -45,7 +45,7 @@ function Movies() {
         res.data.results.find((v) => v.type === "Trailer" && v.site === "YouTube") ||
         res.data.results.find((v) => v.site === "YouTube");
       if (video) {
-        setTrailerUrl(`https://www.youtube.com/watch?v=${video.key}`);
+        setTrailerUrl(`https://www.youtube.com/embed/${video.key}`);
         setShowTrailer(true);
       } else {
         alert("No trailer available for this movie.");
