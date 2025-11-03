@@ -19,8 +19,5 @@ Preview
 
 <img width="1363" height="649" alt="image" src="https://github.com/user-attachments/assets/92ac5687-ec71-458e-a1b6-377f7469fdb1" />
 
-
-Author
 By dahrahm ❤
 
-Want me to make it a bit more *fun and personal*, like something that shows your personality (e.g. “I built this while vibing to Afrobeats and hunting for my next Netflix watchlist 😅”) — or keep it clean and professional like this one?
