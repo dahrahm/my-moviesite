@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import ReactPlayer from "react-player";
+// import ReactPlayer from "react-player";
 import { AiOutlineClose } from "react-icons/ai";
 import "../styles/videos.css";
 

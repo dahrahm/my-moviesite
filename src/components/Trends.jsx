@@ -28,8 +28,8 @@ function Trends() {
         setItems([]);
       }
     };
-    const t = setTimeout(fetchTrending, 700);
-    return () => clearTimeout(t);
+    
+    fetchTrending();
   }, []);
 
   const handlePlay = async (item) => {

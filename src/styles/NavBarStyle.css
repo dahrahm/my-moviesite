@@ -1,4 +1,3 @@
-/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -14,7 +13,6 @@ body {
   padding: 0;
 }
 
-/* ==== NAVBAR ==== */
 nav {
   position: fixed;
   top: 0;
@@ -29,29 +27,24 @@ nav {
   z-index: 1000;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
 }
-
-/* Make sure page starts below navbar — no black space */
 .page-content {
   padding-top: 70px;
 }
 
-/* LEFT SECTION */
 .nav-left {
   display: flex;
   align-items: center;
   gap: 2rem;
 }
 
-/* Logo */
 #heading {
   font-size: 1.6rem;
   font-weight: 700;
-  color: #fff;
+  color: #f05dbf;
   letter-spacing: 1px;
   white-space: nowrap;
 }
 
-/* NAV LINKS */
 .nav-options {
   display: flex;
   align-items: center;
@@ -66,7 +59,6 @@ nav {
   transition: color 0.3s ease;
 }
 
-/* Underline hover */
 .nav-options a::after {
   content: "";
   position: absolute;
@@ -83,10 +75,9 @@ nav {
 }
 
 .nav-options a:hover {
-  color: crimson;
+  color: rgb(207, 124, 174);
 }
 
-/* SEARCHBAR + TOGGLE */
 .input-group {  
   display: flex;
   align-items: center;
@@ -111,7 +102,6 @@ nav {
   cursor: pointer;
 }
 
-/* THEME TOGGLE */
 #Color-switcher {
   width: 50px;
   height: 25px;
@@ -137,7 +127,6 @@ nav {
   left: 26px;
 }
 
-/* ==== HAMBURGER ==== */
 .hamburger {
   display: none;
   color: white;
@@ -149,7 +138,6 @@ nav {
   transform: scale(1.1);
 }
 
-/* ==== DRAWER MENU ==== */
 .drawer {
   position: fixed;
   top: 0;
@@ -163,14 +151,13 @@ nav {
   align-items: center;
   justify-content: center;
   transition: right 0.4s ease;
-  z-index: 2000; /* ⬅️ bump it above everything else */
+  z-index: 2000; 
 }
 
 .drawer.open {
   right: 0;
 }
 
-/* Drawer content (vertical list) */
 .drawer-content {
   display: flex;
   flex-direction: column; /* stack links vertically */
@@ -181,8 +168,6 @@ nav {
   width: 100%;
   padding-top: 5rem;
 }
-
-/* Individual links */
 .drawer-content a {
   text-decoration: none;
   color: #fff;
@@ -192,7 +177,6 @@ nav {
   transition: color 0.3s ease;
 }
 
-/* Hover underline + color */
 .drawer-content a::after {
   content: "";
   position: absolute;
@@ -213,20 +197,18 @@ nav {
   color: crimson;
 }
 
-/* Overlay */
 .overlay {
   display: block;
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(2px);
-  z-index: 1500; /* ⬅️ under drawer */
+  z-index: 1500;
 }
 
 
 /* ==== RESPONSIVE ==== */
 @media (max-width: 992px) {
-  /* Hide desktop nav links */
   .desktop-only {
     display: none !important;
   }
@@ -243,7 +225,6 @@ nav {
     padding: 0 1rem;
   }
 
-  /* Align app name, search, toggle & hamburger neatly */
   .nav-left {
     width: 100%;
     justify-content: flex-start;
@@ -284,7 +265,6 @@ nav {
   }
 }
 @media (max-width: 992px) {
-  /* Hide desktop nav links */
   .nav-options {
     display: none !important;
   }
@@ -306,7 +286,6 @@ nav {
     letter-spacing: 0.5px;
   }
 
-  /* Align search + toggle neatly */
   .input-group {
     display: flex;
     align-items: center;
@@ -341,7 +320,6 @@ nav {
     left: 20px;
   }
 
-  /* Hamburger icon */
   .hamburger {
     display: block;
     position: absolute;
@@ -372,7 +350,7 @@ nav {
   transform: translateX(-50%);
   width: 0%;
   height: 2px;
-  background-color: #f87171; /* underline color */
+  background-color: #f87171;
   transition: width 0.3s ease;
 }
 

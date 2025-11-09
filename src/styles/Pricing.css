@@ -59,10 +59,9 @@
 }
 
 .billing-toggle .label.active {
-  color: #e50914; /* accent */
+  color: #e50914;
 }
 
-/* switch */
 .switch {
   width: 56px;
   height: 28px;
@@ -114,7 +113,6 @@
   cursor: default;
 }
 
-/* card theme */
 .pricing-page.dark .plan-card {
   background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
   border: 1px solid rgba(255,255,255,0.06);
@@ -188,7 +186,7 @@
 
 .subscribe-btn {
   width: 100%;
-  background: linear-gradient(90deg,#e50914,#8b5cf6); /* red -> purple */
+  background: linear-gradient(90deg,#e50914,#8b5cf6);
   color: #fff;
   border: none;
   padding: 12px 14px;

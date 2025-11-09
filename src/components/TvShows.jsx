@@ -31,8 +31,8 @@ function TvShows() {
         setTvData([]);
       }
     };
-    const t = setTimeout(fetchTv, 700);
-    return () => clearTimeout(t);
+    
+    fetchTv();
   }, [input]);
 
   const handlePlay = async (show) => {
