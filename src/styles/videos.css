@@ -1,21 +1,17 @@
-/* --------------------- General Body --------------------- */
 body {
     overflow-x: hidden;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     padding-top: 80px;
 }
 
-/* --------------------- Movie/TV Container --------------------- */
 .movies-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     position: relative;
-     position: relative;
-     z-index: 1;
+     position: relative;z-index: 1;
 }
 
-/* --------------------- Background Colors --------------------- */
 .mainBgColor {
     background-color: #0c1e25;
     width: 100%;
@@ -25,7 +21,6 @@ body {
     width: 100%;
 }
 
-/* --------------------- Movie/TV Cards --------------------- */
 .movies-container img {
     width: 350px;
     height: 550px;
@@ -38,7 +33,6 @@ body {
     transform: scale(1.05);
 }
 
-/* --------------------- Titles --------------------- */
 .mainColor {
     color: #fff;
     display: flex;
@@ -59,7 +53,6 @@ body {
     justify-content: center;
 }
 
-/* --------------------- Trailer Overlay --------------------- */
 #container {
     position: relative;
 }
@@ -67,7 +60,6 @@ body {
     opacity: 0.35;
 }
 
-/* --------------------- Play Icon --------------------- */
 #playIcon {
     position: absolute;
     bottom: 70px;
@@ -79,7 +71,6 @@ body {
     display: none;
 }
 
-/* --------------------- Exit Button --------------------- */
 #Exit1 {
     position: absolute;
     margin-left: 475px;
@@ -90,7 +81,6 @@ body {
     display: none;
 }
 
-/* --------------------- Theme Colors --------------------- */
 .DarkTheme {
     color: #fff;
 }
@@ -98,7 +88,6 @@ body {
     color: #ff206e;
 }
 
-/* --------------------- Trailer Player --------------------- */
 .player {
     position: absolute;
     margin-top: 120px;
@@ -110,14 +99,12 @@ body {
     z-index: 100;
 }
 
-/* --------------------- Movie/TV Hover and Click --------------------- */
 .movies-container h3, 
 .movies-container img {
     cursor: pointer;
     transition: 0.7s;
 }
 
-/* --------------------- Responsive Tweaks --------------------- */
 @media (max-width: 768px) {
     .movies-container img {
         width: 250px;

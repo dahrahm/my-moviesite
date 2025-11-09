@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState, useCallback} from "react";
 import axios from "axios";
 import { AiFillPlayCircle } from "react-icons/ai";
 import { container } from "./NavBar";
@@ -31,9 +31,9 @@ function Movies() {
   };
 
   useEffect(() => {
-    const t = setTimeout(fetchMovies, 700);
-    return () => clearTimeout(t);
-  }, [inputValue]);
+  const t = setTimeout(fetchMovies, 700);
+  return () => clearTimeout(t);
+}, [inputValue, fetchMovies]);
 
   const handlePlay = async (movie) => {
     try {
